@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FFB75E;
+    background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+    background: linear-gradient(to right, #ED8F03, #FFB75E);
+    color: black;
+    transition-duration: .3s;
+    transition: linear;
+}
+
+body.dark {
+    color: var(--gold-color);
+    background: none;
+    background-color: black;
+    transition-duration: .3s;
+    transition: linear;
+}
+
+:root {
+    --hieroglyph-font: 'Noto Sans Egyptian Hieroglyphs', cursive;
+    --main-font: "Almendra", serif;
+    /* --main-color: #FFB30D; */
+    /* #A64F03 #593E25*/
+    /* --main-color: #F2E3D5; */
+    --main-color: #fff;
+    --home-color: black;
+    --gold-color: #F2C12E;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}

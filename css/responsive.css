@@ -1,0 +1,97 @@
+@media (max-width: 1300px) {
+    .about-container {
+        width: 90%;
+        padding: 50px 40px;
+    }
+    .stats,
+    .features {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #About_Us {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+    .about-container {
+        width: 95%;
+        padding: 40px 25px;
+    }
+    .about-container h2 {
+        font-size: 38px;
+    }
+    .about-container h2::after {
+        font-size: 35px;
+    }
+    .about-container h3 {
+        font-size: 22px;
+    }
+    .about-container>p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+    .stat-item {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .stat-item h4 {
+        font-size: 42px;
+    }
+    .features {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .feature {
+        min-width: auto;
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .feature span {
+        font-size: 45px;
+    }
+    .feature h4 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 30px 20px;
+    }
+    .about-container h2 {
+        font-size: 30px;
+    }
+    .about-container h2::after {
+        font-size: 28px;
+    }
+    .about-container h3 {
+        font-size: 18px;
+    }
+    .about-container>p {
+        font-size: 14px;
+    }
+    .stat-item h4 {
+        font-size: 36px;
+    }
+    .stat-item p {
+        font-size: 14px;
+    }
+    .feature span {
+        font-size: 40px;
+    }
+    .feature h4 {
+        font-size: 20px;
+    }
+    .feature p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,41 @@
+@keyframes themes_dark {
+    0% {
+        left: 1%
+    }
+    50% {
+        left: 30%
+    }
+    100% {
+        left: 60%
+    }
+}
+
+@keyframes themes_light {
+    0% {
+        left: 60%;
+    }
+    50% {
+        left: 30%
+    }
+    100% {
+        left: 1%
+    }
+}
+
+@keyframes title_animation {
+    0% {
+        right: 100%;
+    }
+    25% {
+        right: 50%;
+    }
+    50% {
+        right: 0%
+    }
+    75% {
+        right: -50%;
+    }
+    100% {
+        right: -100%;
+    }
+}
