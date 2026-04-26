@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,9 +45,10 @@
                 </div>
                 <div class="utalities">
 
-                    <button class="login">Register</button>
+                    <button class="login" onclick="toggle_popUp()">Register</button>
 
-                    <button class="menu-btn">Menu</button>
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
 
                     <div class="themes">
                         <input type="checkbox" class="toggle" id="mode">
@@ -73,9 +75,8 @@
             </div>
 
         </div>
-        <div class="phroh">
-            <h3></h3>
-            <a href=""><span></span></a>
+        <div class="image">
+
 
         </div>
 
@@ -121,15 +122,39 @@
             </div>
         </div>
     </section>
+    <div class="login-popup">
+        <div class="container">
+            <i class="fa-solid fa-x close_popup"></i>
+            <div class="box">
+                <div class="head">
+                    <h3>Sign Up</h3>
+                    <img src="images/main/pharaoh.png" alt="">
+                </div>
+                <form action="" class="data">
+                    <input type="text" placeholder="First Name*" name="first_name" id="first_name">
+                    <p class="alert " data-error-name="first_name"></p>
+                    <input type="text" placeholder="Last Name*" name="last_name" id="last_name">
+                    <p class="alert " data-error-name="last_name"></p>
+                    <input type="text" placeholder="Email*" name="email" id="email">
+                    <p class="alert " data-error-name="email"></p>
+                    <input type="password" placeholder="password*" name="password" id="password">
+                    <p class="alert " data-error-name="password"></p>
+                </form> <button class="sign-up" onclick="submitForm();">sign-up <img src="images/main/eye.png" alt=""></button>
+                <div class="user-display">
+                    <div class="user-info">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <footer>
         2026 IT Project -- Tourism Company
     </footer>
 
-
     <script src="js/funs.js"></script>
     <script src="js/index.js"></script>
 </body>
-
-
 
 </html>

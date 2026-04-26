@@ -2,9 +2,19 @@ let toggle_btn = document.querySelector(".toggle"),
     body_ele = document.body,
     slide_ball = document.querySelector(".slider"),
     nav_btns = document.querySelectorAll("#main .utalities button"),
-    current_theme = localStorage.getItem("theme");
+    current_theme = localStorage.getItem("theme"),
+    nav_bar = document.querySelector(".nav-bar"),
+    menu_ele = document.querySelector("#main .menu"),
+    popup_ele = document.querySelector(".login-popup"),
+    popup_container = document.querySelector(".login-popup .container"),
+    popup_close = popup_ele.querySelector(".close_popup"),
+    popup_inputs = popup_ele.querySelectorAll("input"),
+    form_ele = popup_ele.querySelector(".data"),
+    user_ele = popup_ele.querySelector(".user-display");
 
 update_theme();
+update_user_ui();
+window.addEventListener('scroll', nav_change);
 
 toggle_btn.addEventListener('change', function() {
     slide_ball.style.animation = ''
@@ -32,3 +42,23 @@ toggle_btn.addEventListener('change', function() {
 
     }
 });
+
+popup_ele.addEventListener('click', toggle_popUp);
+popup_container.addEventListener('click', function(e) {
+    e.stopPropagation();
+})
+popup_close.addEventListener('click', toggle_popUp);
+
+form_ele.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let focus_input = form_ele.querySelector("input:focus");
+    if (focus_input) focus_input.blur();
+    submitForm();
+
+})
+
+popup_inputs.forEach(function(popup_input) {
+    popup_input.addEventListener("blur", function() {
+        check_input(popup_input);
+    })
+})

@@ -9,9 +9,15 @@ html {
 }
 
 body {
-    background: #FFB75E;
+    /* background: #FFB75E;
     background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
-    background: linear-gradient(to right, #ED8F03, #FFB75E);
+    background: linear-gradient(to right, #ED8F03, #FFB75E); */
+    /* background: #ffe259;
+    background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
+    background: linear-gradient(to right, #ffa751, #ffe259); */
+    background: #fceabb;
+    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);
+    background: linear-gradient(to right, #f8b500, #fceabb);
     color: black;
     transition-duration: .3s;
     transition: linear;
@@ -28,9 +34,6 @@ body.dark {
 :root {
     --hieroglyph-font: 'Noto Sans Egyptian Hieroglyphs', cursive;
     --main-font: "Almendra", serif;
-    /* --main-color: #FFB30D; */
-    /* #A64F03 #593E25*/
-    /* --main-color: #F2E3D5; */
     --main-color: #fff;
     --home-color: black;
     --gold-color: #F2C12E;
