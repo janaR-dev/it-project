@@ -111,18 +111,19 @@ function submitForm() {
 function update_user_ui() {
     const reg_btn = document.querySelector(".login");
     let stored_user = localStorage.getItem("user_dataa");
+    reg_btn.innerHTML = ''
 
     if (stored_user) {
         let user = JSON.parse(stored_user);
 
-        reg_btn.innerHTML = ` ${user.first_name}`;
+        reg_btn.innerHTML = `<i class="fa-regular fa-user"></i>`;
 
         reg_btn.onclick = () => {
             toggle_popUp();
         };
 
     } else {
-        reg_btn.innerHTML = "Register";
+        reg_btn.innerHTML = `Register`;
 
         reg_btn.onclick = () => {
             toggle_popUp();
@@ -165,7 +166,9 @@ function display_user_dataa(user_dataa) {
 }
 
 function back_to_form() {
+
     localStorage.removeItem('user_dataa');
+    update_user_ui()
 
     form_ele.style.display = 'block';
     user_ele.style.display = 'none';
@@ -185,6 +188,7 @@ function back_to_form() {
         button_submit.style.display = 'block'
 
     user_info.innerHTML = "";
-    update_user_ui();
+    toggle_popUp();
+
 
 }
