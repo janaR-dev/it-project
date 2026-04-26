@@ -1,185 +1,15 @@
-@media (min-width: 350px) and (max-width: 992px) {
-    #main .nav-bar .container .logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 30%;
-    }
-    #main .nav-bar .container .logo h1 {
-        display: none;
-    }
-    #main .nav-bar .container .logo img {
-        position: relative;
-        display: flex;
-        width: 70%;
-    }
-    #main .nav-bar .container .utalities button {
-        width: 60px;
-        height: 30px;
-        border-radius: 40px;
-        margin-inline: 8px;
-        font-size: 12px;
-        font-weight: 600;
-    }
-    #main .nav-bar .container .label {
-        border: 2px solid var(--home-color);
-        width: 60px;
-        height: 30px;
-        border-radius: 40px;
-        font-size: 13px;
-    }
-    #main .nav-bar .container .label i:nth-of-type(1) {
-        left: -5%;
-    }
-    #main .nav-bar .container .slider {
-        background-color: var(--home-color);
-        width: 20px;
-        height: 20px;
-        border-radius: 50px;
-        position: absolute;
-        top: 50%;
-    }
-    #main .nav-bar .container .utalities .menu-btn {
-        display: inline-block;
-        width: 40px;
-    }
-    #main .menu.show {
-        height: 175px;
-    }
-    #main .menu {
-        height: 0px;
-        overflow: hidden;
-        width: 100%;
-        position: absolute;
-        top: 115%;
-        left: 50%;
-        border-radius: 15px;
-        text-align: center;
-        transform: translateX(-50%);
-        transition-duration: .5s;
-    }
-    #main .nav-bar .container .menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    #main .nav-bar .container .menu ul li {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        background-color: #fec944f0;
-        border: 0;
-        border-radius: 0px;
-        padding-block: 10px;
-    }
-    #main .nav-bar .container .menu ul li:hover {
-        background-color: #fec944;
-    }
-    #main .nav-bar .container .menu ul li a {
-        color: var(--home-color);
-    }
-    body.dark #main .nav-bar .container ul li {
-        border: 0;
-        border-radius: 0px;
-    }
-    body.dark #main .nav-bar .container ul li {
-        background-color: #765c1bea;
-    }
-    body.dark #main .nav-bar .container ul li:hover {
-        background-color: #ca9309d4;
-    }
-    body.dark #main .nav-bar .container ul li a {
-        color: var(--gold-color);
-    }
-    #main .image {
-        width: 80%;
-        left: 10%;
-    }
-    #main .title {
-        font-size: 90px;
-    }
+@media (max-width: 1300px) {
     .about-container {
-        padding: 30px 20px;
+        width: 90%;
+        padding: 50px 40px;
     }
-    .about-container h2 {
-        font-size: 30px;
-    }
-    .about-container h2::after {
-        font-size: 28px;
-    }
-    .about-container h3 {
-        font-size: 18px;
-    }
-    .about-container>p {
-        font-size: 14px;
-    }
-    .stat-item h4 {
-        font-size: 36px;
-    }
-    .stat-item p {
-        font-size: 14px;
-    }
-    .feature span {
-        font-size: 40px;
-    }
-    .feature h4 {
-        font-size: 20px;
-    }
-    .feature p {
-        font-size: 14px;
-    }
-    .login-popup .container {
-        position: relative;
-        width: 70%;
-        margin: auto;
+    .stats,
+    .features {
+        gap: 25px;
     }
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
-    #main .nav-bar .container .logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 30%;
-    }
-    #main .nav-bar .container .logo h1 {
-        display: block;
-    }
-    #main .nav-bar .container .logo img {
-        position: relative;
-        display: flex;
-        width: 50%;
-    }
-    #main .nav-bar .container .utalities button {
-        width: 80px;
-        height: 40px;
-        border-radius: 50px;
-        margin-inline: 10px;
-        font-size: 14px;
-        font-weight: 700;
-    }
-    #main .nav-bar .container .label {
-        border: 2px solid var(--home-color);
-        width: 80px;
-        height: 40px;
-        border-radius: 40px;
-        font-size: 15px;
-    }
-    #main .nav-bar .container .label i:nth-of-type(1) {
-        left: 0%;
-    }
-    #main .nav-bar .container .slider {
-        background-color: var(--home-color);
-        width: 30px;
-        height: 30px;
-        border-radius: 50px;
-        position: absolute;
-        top: 50%;
-    }
-    #main .title {
-        font-size: 90px;
-        top: 14%;
-    }
+@media (max-width: 768px) {
     #About_Us {
         min-height: auto;
         padding: 60px 20px;
@@ -201,6 +31,22 @@
         font-size: 16px;
         line-height: 1.7;
         margin-bottom: 40px;
+    }
+    .explore-container {
+        flex-direction: column;
+        height: auto;
+        padding:10px;
+    }
+    .card {
+        clip-path: none;
+        height: 300px;
+        margin-right:0;
+        margin-bottom: 15px;
+
+    }
+    .vertical-title{
+        font-size: 1.5rem;
+        gap:5px;
     }
     .stats {
         flex-direction: column;
@@ -231,31 +77,37 @@
     .feature h4 {
         font-size: 22px;
     }
-    .login-popup .container {
-        position: relative;
-        width: 60%;
-        margin: auto;
-    }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-    #main .nav-bar .container .logo img {
-        position: relative;
-        display: flex;
-        width: 30%;
-    }
-    #main .title {
-        font-size: 110px;
-    }
-}
-
-@media (max-width: 1300px) {
+@media (max-width: 480px) {
     .about-container {
-        width: 90%;
-        padding: 50px 40px;
+        padding: 30px 20px;
     }
-    .stats,
-    .features {
-        gap: 25px;
+    .about-container h2 {
+        font-size: 30px;
+    }
+    .about-container h2::after {
+        font-size: 28px;
+    }
+    .about-container h3 {
+        font-size: 18px;
+    }
+    .about-container>p {
+        font-size: 14px;
+    }
+    .stat-item h4 {
+        font-size: 36px;
+    }
+    .stat-item p {
+        font-size: 14px;
+    }
+    .feature span {
+        font-size: 40px;
+    }
+    .feature h4 {
+        font-size: 20px;
+    }
+    .feature p {
+        font-size: 14px;
     }
 }
