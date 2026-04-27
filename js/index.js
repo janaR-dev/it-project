@@ -47,6 +47,7 @@ popup_ele.addEventListener('click', toggle_popUp);
 popup_container.addEventListener('click', function(e) {
     e.stopPropagation();
 })
+
 popup_close.addEventListener('click', toggle_popUp);
 
 form_ele.addEventListener("submit", function(e) {

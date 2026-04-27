@@ -121,6 +121,7 @@ function update_user_ui() {
         reg_btn.onclick = () => {
             toggle_popUp();
         };
+        display_user_dataa(user);
 
     } else {
         reg_btn.innerHTML = `Register`;
@@ -129,6 +130,7 @@ function update_user_ui() {
             toggle_popUp();
         };
     }
+
 }
 
 function user_data(first_name, last_name, email) {
@@ -168,10 +170,9 @@ function display_user_dataa(user_dataa) {
 function back_to_form() {
 
     localStorage.removeItem('user_dataa');
-    update_user_ui()
-
-    form_ele.style.display = 'block';
     user_ele.style.display = 'none';
+
+    form_ele.style.display = 'flex';
     form_ele.reset();
 
     let input_errors = document.querySelectorAll(`p.alert`);
@@ -185,10 +186,11 @@ function back_to_form() {
         button_submit = popup_ele.querySelector(".sign-up");
 
     head.style.display = 'block',
-        button_submit.style.display = 'block'
+        button_submit.style.display = 'flex'
 
     user_info.innerHTML = "";
-    toggle_popUp();
+    // toggle_popUp();
+    update_user_ui()
 
 
 }

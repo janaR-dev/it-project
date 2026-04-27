@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,9 +45,10 @@
                 </div>
                 <div class="utalities">
 
-                    <button class="login">Register</button>
+                    <button class="login" onclick="toggle_popUp()">Register</button>
 
-                    <button class="menu-btn">Menu</button>
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
 
                     <div class="themes">
                         <input type="checkbox" class="toggle" id="mode">
@@ -73,47 +75,46 @@
             </div>
 
         </div>
-        <div class="phroh">
-            <h3></h3>
-            <a href=""><span></span></a>
+        <div class="image">
+
 
         </div>
 
     </header>
     <section id="About_Us">
-        <div class="about-container">
+        <div class="container">
             <h2>Who Are We?</h2>
             <h3>Welcome to Kemet! Where History Comes Alive</h3>
             <p>We are not just travel guides; we are storytellers. Kemet was founded with a single mission: to show the world the real Egypt. Not just the pyramids you see in pictures, but the taste of the tea in a Nubian village, the sound of the wind at
                 the Valley of the Kings, and the warmth of the people along the Nile.</p>
 
-            <div class="stats">
-                <div class="stat-item">
+            <div class="info">
+                <div class="item">
                     <h4>15+</h4>
                     <p>Years of Experience</p>
                 </div>
-                <div class="stat-item">
+                <div class="item">
                     <h4>50k+</h4>
                     <p>Happy Travelers</p>
                 </div>
-                <div class="stat-item">
+                <div class="item">
                     <h4>25+</h4>
                     <p>Expert Egyptologists</p>
                 </div>
             </div>
 
             <div class="features">
-                <div class="feature">
+                <div class="item">
                     <span>🏛️</span>
                     <h4>Authentic Experiences</h4>
                     <p>Skip the tourist traps. We take you to hidden tombs, local markets, and ancient workshops.</p>
                 </div>
-                <div class="feature">
+                <div class="item">
                     <span>📜</span>
                     <h4>Led by Historians</h4>
                     <p>Every tour is guided by a licensed Egyptologist who breathes life into stone reliefs.</p>
                 </div>
-                <div class="feature">
+                <div class="item">
                     <span>🚢</span>
                     <h4>Luxury Nile Cruises</h4>
                     <p>Sail from Luxor to Aswan on private dahabeahs (traditional sailing boats).</p>
@@ -121,15 +122,39 @@
             </div>
         </div>
     </section>
+    <div class="login-popup">
+        <div class="container">
+            <i class="fa-solid fa-x close_popup"></i>
+            <div class="box">
+                <div class="head">
+                    <h3>Sign Up</h3>
+                    <img src="images/main/pharaoh.png" alt="">
+                </div>
+                <form action="" class="data">
+                    <input type="text" placeholder="First Name*" name="first_name" id="first_name">
+                    <p class="alert " data-error-name="first_name"></p>
+                    <input type="text" placeholder="Last Name*" name="last_name" id="last_name">
+                    <p class="alert " data-error-name="last_name"></p>
+                    <input type="text" placeholder="Email*" name="email" id="email">
+                    <p class="alert " data-error-name="email"></p>
+                    <input type="password" placeholder="password*" name="password" id="password">
+                    <p class="alert " data-error-name="password"></p>
+                </form> <button class="sign-up" onclick="submitForm();"><span>sign-up</span><img src="images/main/eye.png" alt=""></button>
+                <div class="user-display">
+                    <div class="user-info">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <footer>
         2026 IT Project -- Tourism Company
     </footer>
 
-
     <script src="js/funs.js"></script>
     <script src="js/index.js"></script>
 </body>
-
-
 
 </html>
