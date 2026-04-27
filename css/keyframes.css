@@ -24,7 +24,7 @@
 
 @keyframes title_animation {
     0% {
-        right: 100%;
+        right: 115%;
     }
     25% {
         right: 50%;
@@ -36,6 +36,6 @@
         right: -50%;
     }
     100% {
-        right: -100%;
+        right: -115%;
     }
 }
