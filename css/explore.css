@@ -1,42 +1,49 @@
+
+
+/* 1. تنسيق الحاوية الأساسية (للتحكم في توزيع الكروت) */
 .explore-container {
-    display: flex;
-    justify-content: center;
+    display: flex; /* عشان الكروت تترص جنب بعض */
+    justify-content: center; /* توسيط الكروت في الصفحة */
     align-items: center;
-    gap: -20px;
+    gap: -20px; /* مسافة بين الكروت */
     margin: 0;
-    padding: 0;
+    padding:  0;
     width: 100%;
     height: 90vh;
     overflow: hidden;
 }
 
+/* 2. تنسيق الكارت نفسه */
 .card {
-    position: relative;
-    flex: 1;
+    position: relative; /* مهم جداً عشان التداخل */
+    flex: 1;  
     margin-left: -40px;
-    /* width: 320px; /* عرض الكارت */
+   /* width: 320px; /* عرض الكارت */
     height: 100%;
-    overflow: hidden;
-    /* text-decoration: none; /* بنشيل خط اللينك الافتراضي */
-    transition: 0.3s ease;
+    overflow: hidden; /* عشان الصورة ما تطلعش بره حواف الكارت */
+   /* text-decoration: none; /* بنشيل خط اللينك الافتراضي */
+    transition: 0.3s ease; /* لنعومة الحركة */
     cursor: pointer;
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    clip-path: polygon(15% 0%,100% 0%,85% 100%,0% 100%);
 }
 
+/* 3. تنسيق الصورة */
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* عشان الصورة تغطي الكارت كله بدون ما تتشوه */
     transition: 0.5s ease;
     clip-path: none;
 }
 
+/* تاثير التكبير عند الوقوف بالماوس */
 .card:hover img {
     transform: scale(1.2);
 }
 
+/* 4. تنسيق منطقة النص (الـ Content) */
 .content {
-    /*  position: absolute;
+  /*  position: absolute;
     bottom:50px;
     left: 50%;
     padding: 0 20px;
@@ -45,71 +52,74 @@
     transition: 0.3s;
     z-index: 1;*/
     position: absolute;
-    top: 10%;
+    top: 10%;        /* نقطة البداية الموحدة لجميع النصوص */
     left: 0;
     right: 0;
-    height: 80%;
+    height: 80%;     /* مساحة ثابتة للمحتوى */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    align-items: center;    /* توسيط أفقي */
+    justify-content: space-between; /* هذا هو السر: يدفع النص للأعلى والزر للأسفل بالتساوي */
     z-index: 1;
     pointer-events: none;
 }
 
+/* تنسيق الزر المخفي */
 .btn-explore {
     display: inline-block;
     padding: 8px 20px;
-    background-color: transparent;
+    background-color: transparent; /* لون ذهبي مناسب لـ Kemet */
     color: #C0A16B;
     border: 1px solid #C0A16B;
     border-radius: 5px;
     margin-top: 20px;
     opacity: 1;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* خط أنيق للزر */
     font-size: 0.9rem;
-    text-transform: uppercase;
+    text-transform: uppercase; /* مخفي في البداية */
     transition: 0.3s;
     z-index: 1;
 }
 
+/* إظهار الزر عند الوقوف بالماوس */
 .btn-explore {
-    pointer-events: auto;
+   pointer-events: auto; /* الزر هو الوحيد اللي ينفع نضغط عليه */
     padding: 8px 18px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية داكنة خفيفة تزيد التباين */
+    color: #FFF; /* لون الزر */
     border: 1px solid #FFD700;
     border-radius: 5px;
     transition: 0.3s;
     margin-bottom: 20px;
     opacity: 1;
-}
-
-*/ .card:hover {
-    width: 300px;
-    flex: 1.5;
+}*/
+.card:hover {
+    width: 300px; /* الكارت يكبر قليلاً عند التفاعل */
+    flex:1.5;
     z-index: 2;
 }
-
 .vertical-title {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* جعل الحروف تحت بعضها */
+    align-items: center;    /* توسيط الحروف */
     margin: 0;
-    /* line-height: 1.1;       /* تقليل المسافة العمودية بين الحروف */
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2.5rem;
+   /* line-height: 1.1;       /* تقليل المسافة العمودية بين الحروف */
+    /* اختيار الخط المناسب (يجب ربطه في الـ Head بـ Google Fonts) */
+    font-family: 'Cinzel Decorative', serif; 
+    font-size: 2.5rem;       /* تكبير حجم الحروف */
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(0, 0, 0, 0.5);
-    color: #FFD700;
-    text-transform: uppercase;
-    gap: 20px;
-    /* position: relative;*/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(0,0,0,0.5);
+    /* اللون الذهبي الفخم المطفي */
+    color:#FFD700 ;         
+    text-transform: uppercase; /* جعل كل الحروف Capital */
+    gap:20px;  /* بنشيل التباعد الأفقي عشانهم بقوا تحت بعض */
+   /* position: relative;*/
 }
 
+/* 2. إضافة تأثير ظل بسيط ليبرز النص فوق أي لون في الصورة */
 .vertical-title span {
-    display: block;
-    /* كل span تأخذ سطر كامل */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /* ظل أسود خفيف */
+    display: block; /* كل span تأخذ سطر كامل */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* ظل أسود خفيف */
 }
+
+
