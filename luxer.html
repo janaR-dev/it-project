@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxor</title>
+    <link rel="stylesheet" href="css\luxer.css">
+    <link rel="icon" href="images/main/icon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="main">
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/main/logo.png" alt="">
+                    <h1>Kemet</h1>
+                </div>
+                <div class="menu">
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                    </ul>
+
+
+                </div>
+                <div class="utalities">
+
+                    <button class="login" onclick="toggle_popUp()">Register</button>
+
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
+
+                    <div class="themes">
+                        <input type="checkbox" class="toggle" id="mode">
+                        <label for="mode" class="label"> 
+                            <div class="slider">
+                                
+                            </div>
+                            <i class="fa-solid fa-sun light"></i>
+                            <i class="fa-regular fa-moon dark"></i>
+                        </label>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+
+
+        </nav>
+
+        
+        <header>
+            <h2>Luxor...where the past meets the present in the heart of ancient Egypt</h2>
+        </header>
+         <section class="about">
+        <h3>About Luxor:</h3>
+        <ul>
+            <li>Located on the banks of the Nile River</li>
+            <li>Known as the world's greatest open-air museum</li>
+            <li>Home to famous sites like Karnak Temple and The Valley of the Kings</li>
+            <li>A perfect destination to explore ancient Egyption history</li>
+        </ul>
+    </section>
+    <h3 class="top">Top Attractions</h3>
+     <div class="contr">
+
+        <div class="place">
+            <img src="images\Luxor\karnak5.jpg.jpg" alt="Karnak Temple">
+            <h2>Karnak Temple</h2>
+            <input type="checkbox" id="p1">
+            <label for="p1" class="btn">View Details </label>
+
+             <div class="details">
+                <div class="gallery">
+                    <img src="images\Luxor\karnak.jpg.jpg">
+                    <img src="images\Luxor\karnak1.jpg.jpg">
+                    <img src="images\Luxor\karnak4.jpg.jpg">
+                    <img src="images\Luxor\karnak3.jpg.jpg">
+                </div>
+                <p>Karnak Temple is one of the largest and most impressive ancient temples in Egypy,famous for its massive columns and rich history</p>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>    
+        <div class="place">
+            <img src="images\Luxor\hatch2.jpg" alt="Hatchbsut Temple">
+            <h2>Hatchepsut Temple</h2>
+            <input type="checkbox" id="p2">
+            <label for="p2" class="btn">View Details </label>
+
+            <div class="details">
+                <p>The Temple of Hatchepsut is a stunning ancient temple in Luxor,built for Egypt's famous female pharaoh.</p>
+                <div class="gallery">
+                    <img src="images\Luxor\hatshbsut.jpg">
+                    <img src="images\Luxor\hatsh.jpg">
+                    <img src="images\Luxor\hatch3.jpg" >
+                </div>
+                <p>"The Temple of Hatshepsut is a very big and wonderful place in Luxor, it has three levels with many tall pillars, and it tells the story of a strong queen from ancient Egypt."
+                </p>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div> 
+
+        <div class="place">
+            <img src="images\Luxor\valley of kings.jpg" alt="Valley of the Kings">
+            <h2>Valley of the Kings</h2>
+            <input type="checkbox" id="p3">
+            <label for="p3" class="btn">View Details </label>
+
+            <div class="details">
+                <p>The Valley of the Kings is a famous place in Luxor where many ancient Egyptian kings were burried.</p>
+                <div class="gallery">
+                    <img src="images\Luxor\kings.jpg">
+                    <img src="images\Luxor\kin.jpg">
+                    
+                </div>
+                <p> "The Valley of the Kings is a very large and quiet place in the mountains of Luxor, where people can see many beautiful tombs that were made for the famous kings of ancient Egypt a long time ago."
+                </p>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="place">
+            <img src="images\Luxor\luxor1.jpg" alt="Luxor Temple">
+            <h2>Luxor Temple</h2>
+
+            <input type="checkbox" id="p4">
+            <label for="p4" class="btn">View Details </label>
+
+            <div class="details">
+                <p>Luxor Temple is a great and beautiful place located in the center of the city.</p>
+                <div class="gallery">
+                    <img src="images\Luxor\luxor temple.jpg">
+                    <img src="images\Luxor\lu3.jpg">
+                    <img src="images\Luxor\lu2.jpg">
+                    
+                </div> 
+                <p>
+                    "Luxor Temple is a very large and famous building near the Nile River, it has many tall statues and big pillars, and it looks wonderful at night when all the lights are on."
+                </p>
+                <a href="booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+     </div>  
+       <section class="visit">
+        <h3>Why Visit Luxor :</h3>
+        <ul>
+            <li>Explore the world's largest open-air museum.</li>
+            <li>Witness the majesty of ancient Egyptian temples.</li>
+            <li>Enjoy a peaceful felucca ride on the Nile.</li>
+            <li>Discover the secrets of the Valley of the Kings.</li>
+            <li>Experience the thrill of a sunrise balloon ride.</li>
+        </ul>
+    </section>
+    <div class="login-popup">
+        <div class="container">
+            <i class="fa-solid fa-x close_popup"></i>
+            <div class="box">
+                <div class="head">
+                    <h3>Sign Up</h3>
+                    <img src="images/main/pharaoh.png" alt="">
+                </div>
+                <form action="" class="data">
+                    <input type="text" placeholder="First Name*" name="first_name" id="first_name">
+                    <p class="alert " data-error-name="first_name"></p>
+                    <input type="text" placeholder="Last Name*" name="last_name" id="last_name">
+                    <p class="alert " data-error-name="last_name"></p>
+                    <input type="text" placeholder="Email*" name="email" id="email">
+                    <p class="alert " data-error-name="email"></p>
+                    <input type="password" placeholder="password*" name="password" id="password">
+                    <p class="alert " data-error-name="password"></p>
+                </form> <button class="sign-up" onclick="submitForm();"><span>sign-up</span><img src="images/main/eye.png" alt=""></button>
+                <div class="user-display">
+                    <div class="user-info">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        2026 IT Project -- Tourism Company
+    </footer>
+
+    <script src="js/funs.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
