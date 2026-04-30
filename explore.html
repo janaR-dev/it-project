@@ -67,6 +67,33 @@
             </div>
         </nav>
     </header>
+    <div class="login-popup">
+        <div class="container">
+            <i class="fa-solid fa-x close_popup"></i>
+            <div class="box">
+                <div class="head">
+                    <h3>Sign Up</h3>
+                    <img src="images/main/pharaoh.png" alt="">
+                </div>
+                <form action="" class="data">
+                    <input type="text" placeholder="First Name*" name="first_name" id="first_name">
+                    <p class="alert " data-error-name="first_name"></p>
+                    <input type="text" placeholder="Last Name*" name="last_name" id="last_name">
+                    <p class="alert " data-error-name="last_name"></p>
+                    <input type="text" placeholder="Email*" name="email" id="email">
+                    <p class="alert " data-error-name="email"></p>
+                    <input type="password" placeholder="password*" name="password" id="password">
+                    <p class="alert " data-error-name="password"></p>
+                </form> <button class="sign-up" onclick="submitForm();"><span>sign-up</span><img src="images/main/eye.png" alt=""></button>
+                <div class="user-display">
+                    <div class="user-info">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <div class="explore-container">
         <a href="giza.html" class="card">
             <img src="images/explore/Giza.jpg" alt="Giza">
