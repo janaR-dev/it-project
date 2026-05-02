@@ -47,7 +47,6 @@ popup_ele.addEventListener('click', toggle_popUp);
 popup_container.addEventListener('click', function(e) {
     e.stopPropagation();
 })
-
 popup_close.addEventListener('click', toggle_popUp);
 
 form_ele.addEventListener("submit", function(e) {
@@ -63,3 +62,84 @@ popup_inputs.forEach(function(popup_input) {
         check_input(popup_input);
     })
 })
+
+
+
+        const contactForm = document.querySelector(".contact-card:nth-of-type(1) form");
+        const full_name = document.getElementById("full_name");
+        const email = document.getElementById("email");
+        const number = document.getElementById("number");
+        const message = document.getElementById("Suggestions1");
+        if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (full_name.value.trim() === "") {
+            show_error(full_name, "Full Name is required");
+        } else {
+            show_success(full_name);
+        }
+
+        
+        if (email.value.trim() === "") {
+            show_error(email, "Email is required");
+        } else if (!isValidEmail(email.value.trim())) {
+            show_error(email, "Email is not valid");
+        }else {
+            show_success(email);
+        }
+
+        if(number.value.trim()===""){
+            show_error(number,"Phone Number is required");
+        }else {
+                show_success(number);
+            }
+        
+        if (message.value.trim() === "") {
+            show_error(message, "Please enter your message");
+        } else {
+            show_success(message);
+        }
+    });
+}
+
+
+
+        const feedbackForm = document.querySelector(".contact-card:nth-of-type(2) form");
+        const full_name2 = document.getElementById("full_name2");
+        const email2 = document.getElementById("email2");
+        const rate = document.getElementById("rate");
+        const suggestions2 = document.getElementById("Suggestions2");
+
+        
+        if (feedbackForm) {
+        feedbackForm.addEventListener("submit", function(e) {
+       /* e.preventDefault();*/
+       let isValid=true;
+        if (full_name2.value.trim() === "") {
+            show_error(full_name2, "Full Name is required");
+             isValid=false;
+        } else {
+            show_success(full_name2);
+        }
+
+        
+        if (email2.value.trim() === "") {
+            show_error(email2, "Email is required");
+            isValid=false;
+        } else {
+            show_success(email2);
+        }
+
+        
+        if (rate.value === "" || rate.value < 1 || rate.value > 5) {
+            show_error(rate, "Rate must be between 1 and 5");
+             isValid=false;
+        } else {
+            show_success(rate);
+        }
+        if (isValid===false) {
+            e.preventDefault();
+            
+        }
+    });
+}

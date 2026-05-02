@@ -121,7 +121,6 @@ function update_user_ui() {
         reg_btn.onclick = () => {
             toggle_popUp();
         };
-        display_user_dataa(user);
 
     } else {
         reg_btn.innerHTML = `Register`;
@@ -130,7 +129,6 @@ function update_user_ui() {
             toggle_popUp();
         };
     }
-
 }
 
 function user_data(first_name, last_name, email) {
@@ -170,9 +168,10 @@ function display_user_dataa(user_dataa) {
 function back_to_form() {
 
     localStorage.removeItem('user_dataa');
-    user_ele.style.display = 'none';
+    update_user_ui()
 
-    form_ele.style.display = 'flex';
+    form_ele.style.display = 'block';
+    user_ele.style.display = 'none';
     form_ele.reset();
 
     let input_errors = document.querySelectorAll(`p.alert`);
@@ -186,11 +185,32 @@ function back_to_form() {
         button_submit = popup_ele.querySelector(".sign-up");
 
     head.style.display = 'block',
-        button_submit.style.display = 'flex'
+        button_submit.style.display = 'block'
 
     user_info.innerHTML = "";
-    // toggle_popUp();
-    update_user_ui()
+    toggle_popUp();
 
 
+}
+
+
+function show_error(input, message) {
+    const form_control = input.parentElement;
+    form_control.className = "form_control error";
+    const span = form_control.querySelector("span");
+    if (span) {
+        span.innerText = message;
+    }
+}
+
+
+function show_success(input) {
+    const form_control = input.parentElement;
+    form_control.className = "form_control";
+}
+
+
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email.toLowerCase());
 }
