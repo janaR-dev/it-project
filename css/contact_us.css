@@ -8,6 +8,7 @@
     font-family: var(--main-font);
     margin-left: 5px;
 }
+
 #main .nav-bar .container .utalities button:hover {
     background-color: #d4af3765;
 }
@@ -26,6 +27,7 @@
 #main .nav-bar .container .utalities .menu-btn {
     display: none;
 }
+
 .utalities .login {
     width: 90px;
     height: 40px;
@@ -147,9 +149,10 @@ body.dark #main .nav-bar .container ul li a {
     left: 1%;
     animation: themes_light 0.3s linear forwards;
 }
+
 #main .nav-bar .container .toggle:checked+.label .slider.dark {
     left: 60%;
-    background-color: var(--main-color); 
+    background-color: var(--main-color);
     animation: themes_dark 0.3s linear forwards;
 }
 
@@ -159,8 +162,8 @@ body.dark #main .nav-bar .container ul li a {
     background-color: var( --home-color);
     height: 100vh;
     position: relative;
-
 }
+
 #main .home {
     display: flex;
     justify-content: center;
@@ -373,20 +376,17 @@ body.dark #main .nav-bar .container ul li a {
     animation: themes_dark 0.3s linear forwards;
 }
 
-
-
 .forms-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; 
+    align-items: stretch;
     gap: 200px;
     padding: 20px;
     margin-top: 100px;
     z-index: 5;
-    position:relative;
+    position: relative;
 }
-
 
 .contact-card {
     display: flex;
@@ -394,31 +394,32 @@ body.dark #main .nav-bar .container ul li a {
     background: #fffdf9;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0d5b8;
 }
-.form_control{
+
+.form_control {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     margin-bottom: 20px;
     width: 100%;
     flex-direction: column;
 }
-
 
 .sidebar {
     width: 60px;
     background: linear-gradient(180deg, #d4af37, #b8860b);
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 20px 0;
-   
 }
-body.dark .sidebar{
-    background: linear-gradient(180deg,#a9710f,#996515);
+
+body.dark .sidebar {
+    background: linear-gradient(180deg, #a9710f, #996515);
 }
+
 .hieroglyphs {
     font-size: 35px;
     display: flex;
@@ -427,40 +428,35 @@ body.dark .sidebar{
     color: black;
 }
 
-.form_control span{
+.form_control span {
     display: none;
     color: red;
     font-size: 15px;
     visibility: hidden;
-    
 }
 
 .form_content {
     flex: 1;
     padding: 40px;
-    background-image: url(../images/main/background-form.jpeg);
+    background-image: url(../images/contact/background-form.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     font-size: 30px;
-
 }
-.form_control.error span{
+
+.form_control.error span {
     color: red;
     font-size: 14px;
     display: block;
     visibility: visible;
-    
-
-
 }
 
-
-body.dark .form_content{
-    background-image: url(../images/main/dark-background-form.jpeg);
-    
+body.dark .form_content {
+    background-image: url(../images/contact/dark-background-form.jpeg);
 }
+
 .form-header {
     text-align: center;
     margin-bottom: 25px;
@@ -477,12 +473,12 @@ body.dark .form_content{
     color: #000;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+
 .form_control label {
     font-weight: bold;
     font-size: 13px;
@@ -490,8 +486,8 @@ form {
     color: #000;
 }
 
- .form_content input, 
- .form_content textarea {
+.form_content input,
+.form_content textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -499,120 +495,108 @@ form {
     border: 1px solid #dcd0b5;
     border-radius: 8px;
     box-sizing: border-box;
-    
 }
-.form_control.error input ,
-.form_control.error textarea{
 
-border-color:red;
-
+.form_control.error input,
+.form_control.error textarea {
+    border-color: red;
 }
 
 textarea {
     height: 90px;
-    
 }
-
 
 .btn {
     width: 100%;
     padding: 15px;
-    background: #1a2a3a; 
-    color: #d4af37; 
+    background: #1a2a3a;
+    color: #d4af37;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 1px;
     transition: 0.3s;
-    margin-top: auto; 
+    margin-top: auto;
     font-family: var(--main-font);
 }
-body.dark .btn{
-    background-color:#0c1519;
+
+body.dark .btn {
+    background-color: #0c1519;
 }
+
 .btn:hover {
     background: #000;
 }
 
 .reviews-container {
-    width: 100%; 
-    margin: 50px auto; 
+    width: 100%;
+    margin: 50px auto;
     padding: 20px;
-    background: transparent; 
-    border-radius: 15px; 
-    box-shadow: 0 30px 50px rgba(0,0,0,0.05); 
-
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.05);
 }
-
 
 .reviews-main-title {
     text-align: center;
-    font-family: 'Agbalumo', cursive; 
-    color: #1a2a3a; 
+    font-family: 'Agbalumo', cursive;
+    color: #1a2a3a;
     font-size: 28px;
     margin-bottom: 40px;
     letter-spacing: 1px;
 }
-body.dark .reviews-main-title{
+
+body.dark .reviews-main-title {
     color: #dcd0b5;
-    
 }
 
-
-.reviews{
+.reviews {
     display: flex;
     justify-content: center;
-    gap: 25px; 
+    gap: 25px;
     flex-wrap: wrap;
 }
 
-
 .review-card {
-    width: 300px; 
-    background-color:white;
-    border: 2px solid #d4af37; 
+    width: 300px;
+    background-color: white;
+    border: 2px solid #d4af37;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
+
 body.dark .review-card {
     background-color: #0c1519;
-    
 }
 
 .review-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
 }
-
-
-
 
 .card-content {
     padding: 20px;
     text-align: center;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
-
-.key{
-    color: #d4af37; 
+.key {
+    color: #d4af37;
     font-size: 20px;
     margin-bottom: 15px;
 }
-
 
 .photo-review {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 2px solid #d4af37; 
+    border: 2px solid #d4af37;
     margin-bottom: 15px;
 }
-
 
 .user-name {
     font-family: 'Agbalumo', cursive;
@@ -621,7 +605,8 @@ body.dark .review-card {
     margin: 0;
     letter-spacing: 1px;
 }
-body.dark .user-name{
+
+body.dark .user-name {
     color: #dcd0b5;
 }
 
@@ -631,15 +616,15 @@ body.dark .user-name{
     margin: 2px 0 15px 0;
 }
 
-
-.rating{
+.rating {
     font-size: 14px;
     color: black;
     line-height: 1.6;
     font-family: var(--main-font);
     min-height: 80px;
 }
-body.dark .rating{
+
+body.dark .rating {
     color: #dcd0b5;
 }
 
@@ -649,4 +634,3 @@ body.dark .rating{
     margin-top: 15px;
     font-weight: bold;
 }
-
