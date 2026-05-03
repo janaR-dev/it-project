@@ -10,7 +10,9 @@ let toggle_btn = document.querySelector(".toggle"),
     popup_close = popup_ele.querySelector(".close_popup"),
     popup_inputs = popup_ele.querySelectorAll("input"),
     form_ele = popup_ele.querySelector(".data"),
-    user_ele = popup_ele.querySelector(".user-display");
+    user_ele = popup_ele.querySelector(".user-display"),
+    attractions = document.querySelectorAll(".place"),
+    search_input = document.querySelector(".search-input");
 
 update_theme();
 update_user_ui();
@@ -65,6 +67,30 @@ popup_inputs.forEach(function(popup_input) {
         check_input(popup_input);
     })
 })
+
+if (search_input) {
+    search_input.addEventListener("keyup", function(e) {
+        let search_value = search_input.value.toLowerCase(),
+            innertext = document.querySelector('.contr');
+
+        attractions.forEach(function(card) {
+            let attractions_name = card.querySelector("h2").textContent.toLowerCase(),
+                attractions_paragraph = card.querySelector(".details p").textContent.toLowerCase();
+            if (search_value === '' || attractions_name.includes(search_value) || attractions_paragraph.includes(search_value)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+    })
+}
+
+
+
+
+
+
 
 
 

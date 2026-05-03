@@ -722,3 +722,35 @@ body.dark .login-popup .box .user-display .user-info {
     border-color: var(--gold-color, #d4af37);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
+
+.search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 250px;
+}
+
+body.dark .search .search-input {
+    border: 2px solid var(--gold-color);
+}
+
+body.dark .search .search-input::placeholder {
+    color: var(--gold-color);
+}
+
+.search .search-input {
+    width: 300px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    margin-block: 10px;
+    border: 2px solid black;
+}
+
+.search .search-input::placeholder {
+    font-family: var(--main-font);
+    color: black;
+    font-size: 12px;
+}

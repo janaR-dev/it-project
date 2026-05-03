@@ -473,7 +473,7 @@ body.dark .form_content {
     color: #000;
 }
 
-form {
+.forms-container form {
     display: flex;
     flex-direction: column;
     height: 100%;
