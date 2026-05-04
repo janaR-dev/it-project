@@ -91,9 +91,6 @@ if (search_input) {
 
 
 
-
-
-
 const contactForm = document.querySelector(".contact-card:nth-of-type(1) form");
 const full_name = document.getElementById("full_name");
 const email = document.getElementById("email");

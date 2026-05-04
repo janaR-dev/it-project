@@ -262,10 +262,9 @@ body.dark #main .nav-bar .container ul li a {
     z-index: 2;
     max-width: 1200px;
     width: 85%;
-    margin: 0 auto;
+    margin: auto;
     padding: 60px 50px;
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
     border-radius: 30px;
     border: 3px solid rgba(212, 175, 55, 0.5);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
@@ -275,29 +274,16 @@ body.dark #main .nav-bar .container ul li a {
     font-family: var(--main-font);
     font-size: 52px;
     text-align: center;
-    margin-bottom: 15px;
-    position: relative;
-    letter-spacing: 3px;
     font-weight: 700;
-}
-
-#About_Us .container h2::after {
-    content: '𓋹';
-    font-size: 45px;
-    display: block;
-    margin-top: 10px;
 }
 
 #About_Us .container h3 {
     font-family: var(--main-font);
     font-size: 28px;
-    text-align: center;
-    margin-bottom: 35px;
-    letter-spacing: 1px;
-    position: relative;
+    justify-self: center;
+    margin-block: 38px;
+    width: fit-content;
     border-bottom: 2px solid rgba(184, 134, 11, 0.3);
-    display: inline-block;
-    width: auto;
     padding-bottom: 15px;
 }
 
@@ -475,7 +461,6 @@ body.dark #About_Us .container>p {
 body.dark #About_Us .info .item {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     border: 1px solid rgba(212, 175, 55, 0.3);
-    box-shadow: none;
 }
 
 body.dark #About_Us .info .item:hover {
@@ -488,6 +473,10 @@ body.dark #About_Us .info .item h4 {
     color: var(--gold-color);
 }
 
+#About_Us .features .item img {
+    width: 22%;
+}
+
 body.dark #About_Us .info .item p {
     color: #fff;
 }
@@ -495,7 +484,6 @@ body.dark #About_Us .info .item p {
 body.dark #About_Us .features .item {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: none;
 }
 
 body.dark #About_Us .features .item:hover {

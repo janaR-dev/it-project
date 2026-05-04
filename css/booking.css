@@ -1,0 +1,186 @@
+/* bookingticket:yassen */
+
+h2#WLCB {
+    text-align: center;
+    color: rgb(5, 5, 5);
+    padding-top: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+}
+
+body.dark #WLCB {
+    color: #c39d04;
+}
+
+.event-card {
+    width: 900px;
+    margin: 20px auto;
+    display: flex;
+    background: #c39d04;
+    border: 1px solid #ddd;
+    margin-bottom: 75px;
+}
+
+body.dark .event-card {
+    background: #3c310372;
+    border: #000000;
+}
+
+.event-left img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-right {
+    padding: 15px 20px;
+    width: 100%;
+    position: relative;
+}
+
+.event-right h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.shows {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.date {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 25px;
+    color: #316e81;
+}
+
+body.dark .price {
+    color: #00c3ff5e;
+}
+
+.buy {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #b9c304;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition-duration: 0.5s;
+}
+
+.buy:hover {
+    background: #000000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #c39d04;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+body.dark .modal-content {
+    background: #3c310372;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#ticketModal form {
+    display: flex;
+    flex-direction: column;
+}
+
+#ticketModal input,
+select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: #b9c304;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background: #000000;
+}
+
+.tickets-panel {
+    width: 300px;
+    background: #ec4b4b41;
+    color: white;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.dark .tickets-panel {
+    background: #0000002d;
+}
+
+.tickets-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    background: #c39d04;
+}
+
+body.dark .tickets-header {
+    background: #3e3404;
+}
+
+.tickets-body {
+    max-height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 1s;
+    padding: 0;
+}
+
+.tickets-panel.active .tickets-body {
+    max-height: 300px;
+    padding: 10px;
+}
+
+.ticket-item {
+    background: #c39d046e;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}

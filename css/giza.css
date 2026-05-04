@@ -1,0 +1,165 @@
+body {
+    font-family: var(--main-font);
+}
+
+.main2 {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.about {
+    margin: 15px 0px;
+}
+
+.about ul li {
+    margin-left: 50px;
+}
+
+body.dark h3 {
+    color: var(--gold-color);
+}
+
+.visit {
+    margin: 30px 0px;
+    font-family: var(--main-font);
+}
+
+.visit ul li {
+    margin-left: 50px;
+}
+
+.contr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+    margin: 15px;
+    font-family: var(--main-font);
+}
+
+body.dark .place {
+    box-shadow: 0px 5px 20px var(--gold-color);
+}
+
+.place {
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.744);
+    transition: all 0.3s ease;
+}
+
+.place img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contr input {
+    display: none;
+}
+
+.details {
+    display: none;
+}
+
+input:checked+label+.details {
+    display: block;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border: 2px solid var(--home-color);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+body.dark .btn:hover {
+    border-color: var(--gold-color);
+}
+
+body.dark .details a:hover {
+    /*n*/
+    border-color: var(--home-color);
+}
+
+footer {
+    background-color: #333;
+    border: none;
+    text-align: center;
+    padding: 5px;
+}
+
+.main {
+    padding: 10px;
+    /*n*/
+    text-align: center;
+    font-family: var(--main-font);
+    /*n*/
+}
+
+.about {
+    padding: 20px;
+    /*n*/
+    margin: 15px 0px;
+    font-family: var(--main-font);
+    /*n*/
+}
+
+.top {
+    /*n*/
+    padding: 20px;
+    margin: 10px 0px;
+    font-family: var(--main-font);
+}
+
+.visit {
+    padding: 20px;
+    /*n*/
+    margin: 30px 0px;
+    font-family: var(--main-font);
+}
+
+.place:hover {
+    /*n*/
+    border-color: black;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.place video {
+    /*n*/
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    /*n*/
+    border-color: var(--gold-color);
+}
+
+.details a {
+    /*n*/
+    display: inline-flex;
+    text-align: center;
+    padding: 5px 12px;
+    border: 2px solid var(--home-color);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: var(--home-color);
+    text-decoration: none;
+}
+
+body.dark .details a {
+    /*n*/
+    border-color: var(--gold-color);
+    color: var(--gold-color);
+}
+
+.details a:hover {
+    /*n*/
+    border-color: var(--gold-color);
+}

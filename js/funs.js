@@ -194,7 +194,6 @@ function back_to_form() {
 
 }
 
-
 function show_error(input, message) {
     const form_control = input.parentElement;
     form_control.className = "form_control error";
@@ -215,3 +214,70 @@ function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email.toLowerCase());
 }
+
+let selectedEvent = "";
+
+function openModal(eventName) {
+    selectedEvent = eventName;
+    document.getElementById("ticketModal").style.display = "block";
+}
+
+
+function closeModal() {
+    document.getElementById("ticketModal").style.display = "none";
+}
+
+
+function saveTicket(e) {
+    e.preventDefault();
+
+    let inputs = e.target.querySelectorAll("input");
+
+    let ticket = {
+        name: inputs[0].value,
+        national: inputs[1].value,
+        eventName: selectedEvent,
+        ticketId: Date.now()
+    };
+
+    let user = JSON.parse(localStorage.getItem("user_dataa"));
+    let key = `tickets_${user.email}`;
+
+    let tickets = JSON.parse(localStorage.getItem(key)) || [];
+    tickets.push(ticket);
+
+    localStorage.setItem(key, JSON.stringify(tickets));
+
+    closeModal();
+    loadTickets();
+}
+
+
+function loadTickets() {
+    let body = document.getElementById("ticketsBody");
+    let user = JSON.parse(localStorage.getItem("user_dataa"));
+    let key = user ? `tickets_${user.email}` : "tickets";
+    let tickets = JSON.parse(localStorage.getItem(key)) || [];
+    if (body)
+        body.innerHTML = tickets.map(t => `
+        <div class="ticket-item">
+        <p>${t.eventName}</p>
+        <p>Name: ${t.name}</p>
+        <p>Ticket Id: ${t.ticketId}</p>
+        </div>
+    `).join("");
+}
+
+
+function toggleTickets() {
+    document.querySelector(".tickets-panel").classList.toggle("active");
+}
+
+
+window.onload = loadTickets;
+
+
+window.onclick = function(e) {
+    let modal = document.getElementById("ticketModal");
+    if (e.target === modal) modal.style.display = "none";
+};
