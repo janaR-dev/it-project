@@ -32,27 +32,33 @@
         <nav class="nav-bar">
             <div class="container">
                 <div class="logo">
-                    <img src="images\main\logo.png" alt="">
+                    <img src="images/main/logo.png" alt="">
                     <h1>Kemet</h1>
                 </div>
-
                 <div class="menu">
+
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="explore.html">Explore</a></li>
                         <li><a href="booking.html">Booking</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
                     </ul>
-                </div>
 
+
+                </div>
                 <div class="utalities">
-                    <button class="login">Register</button>
-                    <button class="menu-btn">Menu</button>
+
+                    <button class="login" onclick="toggle_popUp()">Register</button>
+
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
 
                     <div class="themes">
                         <input type="checkbox" class="toggle" id="mode">
                         <label for="mode" class="label"> 
-                            <div class="slider"></div>
+                            <div class="slider">
+                                
+                            </div>
                             <i class="fa-solid fa-sun light"></i>
                             <i class="fa-regular fa-moon dark"></i>
                         </label>
@@ -61,6 +67,9 @@
 
                 </div>
             </div>
+
+
+
         </nav>
 
     </header>

@@ -130,3 +130,74 @@ footer {
     background-color: white;
     margin-bottom: 10px;
 }
+
+body.dark .details a:hover {
+    /*n*/
+    border-color: var(--home-color);
+}
+
+footer {
+    background-color: #333;
+    border: none;
+    text-align: center;
+    padding: 5px;
+}
+
+.main {
+    padding: 10px;
+    /*n*/
+    text-align: center;
+    font-family: var(--main-font);
+    /*n*/
+}
+
+.top {
+    /*n*/
+    padding: 20px;
+    margin: 10px 0px;
+    font-family: var(--main-font);
+}
+
+.visit {
+    padding: 20px;
+    /*n*/
+    margin: 30px 0px;
+    font-family: var(--main-font);
+}
+
+.place:hover {
+    /*n*/
+    border-color: black;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.place video {
+    /*n*/
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    /*n*/
+    border-color: var(--gold-color);
+}
+
+.details a {
+    /*n*/
+    display: inline-flex;
+    text-align: center;
+    padding: 5px 12px;
+    border: 2px solid var(--home-color);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: var(--home-color);
+    text-decoration: none;
+}
+
+body.dark .details a {
+    /*n*/
+    border-color: var(--gold-color);
+    color: var(--gold-color);
+}

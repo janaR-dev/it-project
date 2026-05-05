@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keyframes.css">
     <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -49,9 +51,10 @@
                 </div>
                 <div class="utalities">
 
-                    <button class="login">Register</button>
+                    <button class="login" onclick="toggle_popUp()">Register</button>
 
-                    <button class="menu-btn">Menu</button>
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
 
                     <div class="themes">
                         <input type="checkbox" class="toggle" id="mode">
@@ -62,9 +65,14 @@
                             <i class="fa-solid fa-sun light"></i>
                             <i class="fa-regular fa-moon dark"></i>
                         </label>
+
                     </div>
+
                 </div>
             </div>
+
+
+
         </nav>
     </header>
     <div class="login-popup">

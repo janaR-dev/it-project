@@ -55,7 +55,7 @@ function check_input(input) {
         regex = /^[A-Za-z]+[0-9_\-\.]*@(gmail|outlook)\.(com|org)$/
 
     } else {
-        regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){8,}$/;
+        regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     }
 
     if (input_value == '') {

@@ -53,9 +53,10 @@
                 </div>
                 <div class="utalities">
 
-                    <button class="login">Register</button>
+                    <button class="login" onclick="toggle_popUp()">Register</button>
 
-                    <button class="menu-btn">Menu</button>
+                    <button class="menu-btn" onclick="show_menu()"><i class="fa-solid fa-bars"></i></button>
+
 
                     <div class="themes">
                         <input type="checkbox" class="toggle" id="mode">
@@ -66,166 +67,169 @@
                             <i class="fa-solid fa-sun light"></i>
                             <i class="fa-regular fa-moon dark"></i>
                         </label>
+
                     </div>
+
                 </div>
             </div>
 
-            
+
+
         </nav>
     </header>
-<main>
 
 
 
-    
-<h2 id="WLCB">Welcome To Booking Section</p>
-<p>Choose Now !</h2>
-
-<div class="event-card">
-
-  <div class="event-left">
-    <img src="images/Booking/unnamed.jpg" alt="event">
-  </div>
-
-  <div class="event-right">
-
-    <h2>The Grand Museum</h2>
-
-    <p class="shows">No. of Maximum Tickets : Infinite</p>
-
-    <p class="location"><a href="https://maps.app.goo.gl/bekhRBzauh1XotXL9">📍 AL-AHRAM-Giza</a></p>
-
-    <p class="date">15 May 2026</p>
-
-    <p class="price">Prices From: 50 EGP For Student</p>
-
-    <a href="#" class="buy" onclick="openModal('The Grand Museum'); return false;">Buy Tickets</a>
-
-  </div>
-
-</div>
-
-<div class="event-card">
-
-  <div class="event-left">
-    <img src="images/Booking/pyramids.jpg" alt="event">
-  </div>
-
-  <div class="event-right">
-
-    <h2>Giza Pyramids Party</h2>
-
-    <p class="shows">No. of Maximum Tickets : Infinite</p>
-
-    <p class="location"><a href="https://maps.app.goo.gl/dsGA4DgDMjZtafWVA">📍 AL-AHRAM-Giza</a></p>
-
-    <p class="date">27 May 2026</p>
-
-    <p class="price">Prices From: 900 EGP</p>
-
-      <a href="#" class="buy" onclick="openModal('Giza Pyramids Party'); return false;">Buy Tickets</a>
-
-  </div>
-
-</div>
-
-<div class="event-card">
-
-  <div class="event-left">
-    <img src="images/Booking/EGM.jpg" alt="event">
-  </div>
-
-  <div class="event-right">
-
-    <h2>Egyption Museum</h2>
-
-    <p class="shows">No. of Maximum Tickets : Infinite</p>
-
-    <p class="location"><a href="https://maps.app.goo.gl/XQy7FyYXV3qpJDcp7">📍 Tahrir Square </a></p>
-
-    <p class="date">31 May 2026</p>
-
-    <p class="price">Prices From: 75 EGP</p>
-
-      <a href="#" class="buy" onclick="openModal('Egyption Museum'); return false;">Buy Tickets</a>
-
-  </div>
-
-</div>
-
-<div class="event-card">
-
-  <div class="event-left">
-    <img src="images/Booking/kl.jpg" alt="event">
-  </div>
-
-  <div class="event-right">
-
-    <h2>Karnak Temple</h2>
-
-    <p class="shows">No. of Maximum Tickets : Infinite</p>
-
-    <p class="location"><a href="https://maps.app.goo.gl/MHrpZoAqQ7AmUFnb9">📍 Luxor</a></p>
-
-    <p class="date">27 June 2026</p>
-
-    <p class="price">Prices From: 150 EGP</p>
-
-      <a href="#" class="buy" onclick="openModal('Karnak Temple'); return false;">Buy Tickets</a>
-
-  </div>
-
-</div>
 
 
+    <h2 id="WLCB">Welcome To Booking Section</p>
+        <p>Choose Now !</h2>
 
-<div id="ticketModal" class="modal">
+    <div class="event-card">
 
-  <div class="modal-content">
+        <div class="event-left">
+            <img src="images/Booking/unnamed.jpg" alt="event">
+        </div>
 
-    <span class="close" onclick="closeModal()">&times;</span>
+        <div class="event-right">
 
-    <h2>Book Your Ticket</h2>
+            <h2>The Grand Museum</h2>
 
-    <form onsubmit="saveTicket(event)">
+            <p class="shows">No. of Maximum Tickets : Infinite</p>
 
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your name" required>
+            <p class="location"><a href="https://maps.app.goo.gl/bekhRBzauh1XotXL9">📍 AL-AHRAM-Giza</a></p>
 
-      <label>National Number</label>
-      <input type="number" placeholder="Enter your National Number" required min="230000000000" max="39999999999999">
+            <p class="date">15 May 2026</p>
 
-      <label>Payment Method</label>
-      <select>
+            <p class="price">Prices From: 50 EGP For Student</p>
+
+            <a href="#" class="buy" onclick="openModal('The Grand Museum'); return false;">Buy Tickets</a>
+
+        </div>
+
+    </div>
+
+    <div class="event-card">
+
+        <div class="event-left">
+            <img src="images/Booking/pyramids.jpg" alt="event">
+        </div>
+
+        <div class="event-right">
+
+            <h2>Giza Pyramids Party</h2>
+
+            <p class="shows">No. of Maximum Tickets : Infinite</p>
+
+            <p class="location"><a href="https://maps.app.goo.gl/dsGA4DgDMjZtafWVA">📍 AL-AHRAM-Giza</a></p>
+
+            <p class="date">27 May 2026</p>
+
+            <p class="price">Prices From: 900 EGP</p>
+
+            <a href="#" class="buy" onclick="openModal('Giza Pyramids Party'); return false;">Buy Tickets</a>
+
+        </div>
+
+    </div>
+
+    <div class="event-card">
+
+        <div class="event-left">
+            <img src="images/Booking/EGM.jpg" alt="event">
+        </div>
+
+        <div class="event-right">
+
+            <h2>Egyption Museum</h2>
+
+            <p class="shows">No. of Maximum Tickets : Infinite</p>
+
+            <p class="location"><a href="https://maps.app.goo.gl/XQy7FyYXV3qpJDcp7">📍 Tahrir Square </a></p>
+
+            <p class="date">31 May 2026</p>
+
+            <p class="price">Prices From: 75 EGP</p>
+
+            <a href="#" class="buy" onclick="openModal('Egyption Museum'); return false;">Buy Tickets</a>
+
+        </div>
+
+    </div>
+
+    <div class="event-card">
+
+        <div class="event-left">
+            <img src="images/Booking/kl.jpg" alt="event">
+        </div>
+
+        <div class="event-right">
+
+            <h2>Karnak Temple</h2>
+
+            <p class="shows">No. of Maximum Tickets : Infinite</p>
+
+            <p class="location"><a href="https://maps.app.goo.gl/MHrpZoAqQ7AmUFnb9">📍 Luxor</a></p>
+
+            <p class="date">27 June 2026</p>
+
+            <p class="price">Prices From: 150 EGP</p>
+
+            <a href="#" class="buy" onclick="openModal('Karnak Temple'); return false;">Buy Tickets</a>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="ticketModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Book Your Ticket</h2>
+
+            <form onsubmit="saveTicket(event)">
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>National Number</label>
+                <input type="number" placeholder="Enter your National Number" required min="230000000000" max="39999999999999">
+
+                <label>Payment Method</label>
+                <select>
         <option>Card</option>
         <option>Fawry</option>
       </select>
-      <button type="submit" class="submit-btn">Proceed</button>
-    </form>
-  </div>
-</div>
+                <button type="submit" class="submit-btn">Proceed</button>
+            </form>
+        </div>
+    </div>
 
 
 
 
 
 
-<div class="tickets-panel">
-  <div class="tickets-header" onclick="toggleTickets()">
-    <h3>My Tickets</h3>
-    <i class="fa-solid fa-chevron-down" id="ticketsArrow"></i>
-  </div>
+    <div class="tickets-panel">
+        <div class="tickets-header" onclick="toggleTickets()">
+            <h3>My Tickets</h3>
+            <i class="fa-solid fa-chevron-down" id="ticketsArrow"></i>
+        </div>
 
-  <div class="tickets-body" id="ticketsBody">
+        <div class="tickets-body" id="ticketsBody">
 
-  </div>
-</div>
-
-
+        </div>
+    </div>
 
 
 
-  <div class="login-popup">
+
+
+    <div class="login-popup">
         <div class="container">
             <i class="fa-solid fa-x close_popup"></i>
             <div class="box">
@@ -256,10 +260,11 @@
 
 
 
-<footer>
-    2026 IT Project -- Tourism Company
-</footer>
-<script src="js/funs.js"></script>
+    <footer>
+        2026 IT Project -- Tourism Company
+    </footer>
+    <script src="js/funs.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
