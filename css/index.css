@@ -651,7 +651,6 @@ body.dark footer {
     border: 1px solid rgba(212, 175, 55, 0.5);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
     padding: 25px;
-    overflow-wrap: break-word;
 }
 
 .user-info h3 {
@@ -660,9 +659,10 @@ body.dark footer {
     font-size: 24px;
 }
 
-.user-info p {
+.user-info td {
     margin: 15px 0;
     font-size: 18px;
+    overflow-wrap: anywhere;
 }
 
 .user-info span {
@@ -672,6 +672,8 @@ body.dark footer {
 
 .user-info-table {
     margin: auto;
+    display: flex;
+    width: fit-content;
     margin-bottom: 20px;
     border-collapse: collapse;
 }
