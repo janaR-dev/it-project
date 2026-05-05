@@ -670,6 +670,17 @@ body.dark footer {
     font-weight: bold;
 }
 
+.user-info-table {
+    margin: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.user-info-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
 .logout-btn {
     margin-top: 20px;
     color: white;

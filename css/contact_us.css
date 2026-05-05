@@ -80,6 +80,10 @@ body.dark .form-header h1 {
     color: #d4af37;
 }
 
+body.dark label {
+    color: #d4af37;
+}
+
 .form-header h3 {
     margin: 5px 0;
     color: #000;
@@ -89,7 +93,11 @@ body.dark .form-header h3 {
     color: #d4af37;
 }
 
-form {
+.form_control .input-label {
+    font-size: 20px;
+}
+
+.forms-container form {
     display: flex;
     flex-direction: column;
     height: 100%;
