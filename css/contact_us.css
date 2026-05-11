@@ -13,7 +13,6 @@
 .contact-card {
     display: flex;
     width: 450px;
-    background: #fffdf9;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
@@ -22,7 +21,6 @@
 
 .form_control {
     display: flex;
-    align-items: flex-start;
     margin-bottom: 20px;
     width: 100%;
     flex-direction: column;
@@ -31,7 +29,6 @@
 .hieroglyphs {
     font-size: 50px;
     display: flex;
-    flex-direction: column;
     gap: 15px;
     color: black;
 }
@@ -139,9 +136,8 @@ textarea {
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
-    letter-spacing: 1px;
     transition: 0.3s;
-    margin-top: auto;
+    margin: auto;
     font-family: var(--main-font);
 }
 
@@ -151,6 +147,7 @@ body.dark .btn {
 
 .btn:hover {
     background: #000;
+    transform: translateY(-3px);
 }
 
 .reviews-container {
@@ -188,9 +185,8 @@ body.dark .reviews-main-title {
     border: 2px solid #d4af37;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
-    transition-duration: .5s;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition-duration: .5s;
 }
 
 body.dark .review-card {
@@ -220,7 +216,7 @@ body.dark .review-card {
     font-family: var(--main-font);
     color: #1a2a3a;
     font-size: 18px;
-    margin: 0;
+    /* margin: 0;*/
     letter-spacing: 1px;
 }
 
@@ -237,7 +233,7 @@ body.dark .user-name {
 .rating {
     font-size: 14px;
     color: #1a2a3a;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
     font-family: var(--main-font);
     min-height: 80px;
 }

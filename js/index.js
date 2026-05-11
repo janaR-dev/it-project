@@ -89,9 +89,7 @@ if (search_input) {
 
 
 
-
-
-const contactForm = document.querySelector(".contact-card:nth-of-type(1) form");
+const contactForm = document.getElementById("form_control");
 const full_name = document.getElementById("full_name");
 const email = document.getElementById("email");
 const number = document.getElementById("number");
@@ -130,7 +128,7 @@ if (contactForm) {
 
 
 
-const feedbackForm = document.querySelector(".contact-card:nth-of-type(2) form");
+const feedbackForm = document.getElementById("form_control2");
 const full_name2 = document.getElementById("full_name2");
 const email2 = document.getElementById("email2");
 const rate = document.getElementById("rate");
@@ -139,7 +137,6 @@ const suggestions2 = document.getElementById("Suggestions2");
 
 if (feedbackForm) {
     feedbackForm.addEventListener("submit", function(e) {
-        /* e.preventDefault();*/
         let isValid = true;
         if (full_name2.value.trim() === "") {
             show_error(full_name2, "Full Name is required");
