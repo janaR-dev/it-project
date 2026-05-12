@@ -41,6 +41,7 @@ function toggle_popUp() {
 
     popup_ele.classList.toggle("active");
 
+
 }
 
 function check_input(input) {
@@ -108,6 +109,22 @@ function submitForm() {
     }
 }
 
+
+function user_data(first_name, last_name, email) {
+    const user_dataa = {
+        first_name: first_name,
+        last_name: last_name,
+        full_Name: `${first_name} ${last_name}`,
+        email: email
+    };
+
+
+    localStorage.setItem('user_dataa', JSON.stringify(user_dataa));
+
+    display_user_dataa(user_dataa);
+    update_user_ui();
+}
+
 function update_user_ui() {
     const reg_btn = document.querySelector(".login");
     let stored_user = localStorage.getItem("user_dataa");
@@ -131,21 +148,6 @@ function update_user_ui() {
         };
     }
 
-}
-
-function user_data(first_name, last_name, email) {
-    const user_dataa = {
-        first_name: first_name,
-        last_name: last_name,
-        full_Name: `${first_name} ${last_name}`,
-        email: email
-    };
-
-
-    localStorage.setItem('user_dataa', JSON.stringify(user_dataa));
-
-    display_user_dataa(user_dataa);
-    update_user_ui();
 }
 
 function display_user_dataa(user_dataa) {

@@ -88,7 +88,6 @@ if (search_input) {
 
 
 
-
 const contactForm = document.getElementById("form_control");
 const full_name = document.getElementById("full_name");
 const email = document.getElementById("email");
@@ -97,8 +96,12 @@ const message = document.getElementById("Suggestions1");
 if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
         e.preventDefault();
+
+        let isValid = true;
+
         if (full_name.value.trim() === "") {
             show_error(full_name, "Full Name is required");
+            isValid = false;
         } else {
             show_success(full_name);
         }
@@ -108,20 +111,39 @@ if (contactForm) {
             show_error(email, "Email is required");
         } else if (!isValidEmail(email.value.trim())) {
             show_error(email, "Email is not valid");
+            isValid = false;
         } else {
             show_success(email);
         }
 
         if (number.value.trim() === "") {
             show_error(number, "Phone Number is required");
+            isValid = false;
         } else {
             show_success(number);
         }
 
         if (message.value.trim() === "") {
             show_error(message, "Please enter your message");
+            isValid = false;
         } else {
             show_success(message);
+        }
+        if (isValid === false) {
+            e.preventDefault();
+
+        } else {
+            const contactdata = {
+                name: full_name.value,
+                email: email.value,
+                phone: number.value,
+                message: message.value
+
+
+
+            };
+            localStorage.setItem("userfeedback", JSON.stringify(contactdata));
+            contactForm.reset();
         }
     });
 }
@@ -163,6 +185,16 @@ if (feedbackForm) {
         if (isValid === false) {
             e.preventDefault();
 
+        } else {
+            const feedbackdata = {
+                name: full_name2.value,
+                email: email2.value,
+                rating: rate.value,
+
+
+
+            };
+            localStorage.setItem("userfeedback", JSON.stringify(feedbackdata));
         }
     });
 }
